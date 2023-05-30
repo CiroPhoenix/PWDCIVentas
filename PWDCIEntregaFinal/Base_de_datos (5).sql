@@ -2,7 +2,7 @@
 CREATE database IF NOT exists Proyecto_BDM;
 use Proyecto_BDM;
 
-drop database Proyecto_BDM;
+
 
 
 truncate table chat;

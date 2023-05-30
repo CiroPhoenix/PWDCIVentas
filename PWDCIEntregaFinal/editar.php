@@ -13,7 +13,7 @@ if(isset($_POST["Editar"])){
     $Nombre_Usuario=$_POST["Nombre_Usuario"];
     $NomPatr_Usuario=$_POST["NomPatr_Usuario"];
     $NomMatr_Usuario=$_POST["NomMatr_Usuario"];
-    $Rol_Usuario=$_POST["Rol_Usuario"];
+   
     $Genero_Usuario=$_POST["Genero_Usuario"];
     $Nacimiento_Usuario=$_POST["Nacimiento_Usuario"];
     $Correo_Usuario=$_POST["Correo_Usuario"];
@@ -32,7 +32,7 @@ if(isset($_POST["Editar"])){
 
             // CALL EditarUsuario('$Foto_Usuario', '$Nombre_Usuario', '$NomPatr_Usuario', ' $NomMatr_Usuario', ' $Rol_Usuario', '$Genero_Usuario', '$Nacimiento_Usuario', '$Correo_Usuario', ' $Nombre_usuario_Usuario', '$Contrasena_Usuario', '$id');
             // UPDATE usuario set Foto_Usuario= '$Foto_Usuario',Nombre_Usuario='$Nombre_Usuario', NomPatr_Usuario = '$NomPatr_Usuario', NomMatr_Usuario = '$NomMatr_Usuario',Rol_Usuario='$Rol_Usuario',Rol_Usuario='$Rol_Usuario',Genero_Usuario='$Genero_Usuario',Nacimiento_Usuario='$Nacimiento_Usuario',Correo_Usuario='$Correo_Usuario',Nombre_usuario_Usuario='$Nombre_usuario_Usuario',Contrasena_Usuario='$Contrasena_Usuario' WHERE ID_Usuario=$id
-            $sql=" CALL EditarUsuario('$Foto_Usuario', '$Nombre_Usuario', '$NomPatr_Usuario', ' $NomMatr_Usuario', ' $Rol_Usuario', '$Genero_Usuario', '$Nacimiento_Usuario', '$Correo_Usuario', ' $Nombre_usuario_Usuario', '$Contrasena_Usuario', '$id')";
+            $sql=" CALL EditarUsuario('$Foto_Usuario', '$Nombre_Usuario', '$NomPatr_Usuario', ' $NomMatr_Usuario',  '$Genero_Usuario', '$Nacimiento_Usuario', '$Correo_Usuario', ' $Nombre_usuario_Usuario', '$Contrasena_Usuario', '$id')";
             $result=mysqli_query($conn,$sql);
 
             if($result){
@@ -128,18 +128,7 @@ if(isset($_POST["Editar"])){
             </div>
 
 
-            <div class="contenedor">
-                <div class="input-contenedor">
-                    
-                    <select name="Rol_Usuario" id="Rol_Usuario" required value="<?php echo $_SESSION['Rol_Usuario']; ?>">
-                        <option value="0">¿Cual es su Rol?</option>
-                        <option value="1">Maestro</option>
-                        <option value="2">Estudiante</option>
-                        <option value="3">Administrador</option>
-
-                    </select>
-
-                </div>
+            
             
             
             

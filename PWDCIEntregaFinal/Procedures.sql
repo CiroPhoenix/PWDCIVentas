@@ -101,14 +101,15 @@ delimiter ;
 
 
 delimiter //
-create procedure EditarUsuario(FotoUsuario LONGBLOB, NombreUsuario varchar(45), NombrePaterno varchar(45),NombreMaterno varchar(45),RolUsuario enum ('Maestro','Estudiante','Administrador'),GeneroUsuario enum('Masculino','Femenino'),NacimientoUsuario datetime,CorreoUsuario varchar(45),NombreUsername varchar(45),PasswordUsuario varchar(45),IDUsuario int)
+create procedure EditarUsuario(FotoUsuario LONGBLOB, NombreUsuario varchar(45), NombrePaterno varchar(45),NombreMaterno varchar(45), GeneroUsuario enum('Masculino','Femenino'),NacimientoUsuario datetime,CorreoUsuario varchar(45),NombreUsername varchar(45),PasswordUsuario varchar(45),IDUsuario int)
 begin 
 
-UPDATE usuario set Foto_Usuario= FotoUsuario, Nombre_Usuario= NombreUsuario, NomPatr_Usuario= NombrePaterno, NomMatr_Usuario= NombreMaterno, Rol_Usuario=RolUsuario, Genero_Usuario=GeneroUsuario, Nacimiento_Usuario=NacimientoUsuario, Correo_Usuario=CorreoUsuario, Nombre_usuario_Usuario=NombreUsername, Contrasena_Usuario=PasswordUsuario WHERE ID_Usuario= IDUsuario;
+UPDATE usuario set Foto_Usuario= FotoUsuario, Nombre_Usuario= NombreUsuario, NomPatr_Usuario= NombrePaterno, NomMatr_Usuario= NombreMaterno,  Genero_Usuario=GeneroUsuario, Nacimiento_Usuario=NacimientoUsuario, Correo_Usuario=CorreoUsuario, Nombre_usuario_Usuario=NombreUsername, Contrasena_Usuario=PasswordUsuario WHERE ID_Usuario= IDUsuario;
 end//
 delimiter ;
 
 
+drop procedure EditarUsuario;
 
 
 
